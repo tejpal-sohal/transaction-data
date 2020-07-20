@@ -1,0 +1,215 @@
+/* 
+
+SCSS FILES FOR WHOLE APP 
+
+Ideally Each Component should have a file BUT Due to time limitations
+I put evertying in one file
+
+*/
+
+
+/* 
+Variables
+*/
+
+$break-med: 500px;
+$break-large: 1024px;
+$monzo-font: 18px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* 
+HTML BODY GLOBAL
+*/
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin:0; 
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+/* 
+
+Container Styles
+
+*/
+
+
+.container {
+  font: $monzo-font;
+
+  .m-top-3 { 
+    margin-top: 10px;
+  }
+
+  &__card{
+    max-width: 415px;
+    margin: auto;
+
+    @media screen and (min-width: $break-med) {
+      max-width: 380px;
+      padding: 10px;
+    }
+
+    &--transactions {
+      border-radius: 30px 30px 0px 0px;
+      position: relative;
+      padding: 20px 20px 70px 20px;
+      margin-top: -70px;
+      background: #FFF;
+      height: 350px;
+      overflow: scroll;
+      scroll-behavior: smooth;
+
+    @media screen and (min-width: $break-med) {
+      height: 450px;
+
+    }
+
+    .flex-grid {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        background:#f7f5f5;
+        padding: 10px;
+        border-radius: 20px;
+      }
+
+    .center{
+        text-align: center;
+
+      }
+
+      .col {
+        flex: 1;
+        .price::before{
+          content: "£ ";
+          font-size: 25px;
+        }
+
+     
+      .card-group{
+        p{
+          margin:0;
+        }
+ 
+        .card-group--title{
+           color: #33367C;
+           font-size: 15px;
+        }
+
+        .card-group--items{
+          font-size: 12px;
+          color: #535353;
+        }
+    }
+
+      i {
+          background: rgb(2,0,36);
+          background: linear-gradient(54deg, rgb(92, 87, 231) 0%, rgba(19,19,20,1) 55%, rgba(52,52,52,1) 100%);
+          align-items: center;
+          border-radius: 10px;
+          font-size:25px;
+          width: 35px;
+          padding:20px;
+          color: #fff;
+        }
+    }
+
+      .title{
+        font-weight: 300;
+        display: inline;
+        color:#33367C;
+        font-size: 23px;
+      }
+
+    }
+
+
+    &--balance {
+      background: rgb(2,0,36);
+      background: linear-gradient(54deg, rgba(2,0,36,1) 0%, rgba(51,51,244,1) 0%, rgba(52,52,52,1) 100%);
+      border-radius: 30px;
+      position: relative;
+      padding: 20px 20px 100px 20px;
+      margin-top: -35px;
+      color: #fff;
+      -webkit-box-shadow: 0px -5px 25px 2px rgba(0,0,0,0.72);
+      -moz-box-shadow: 0px -5px 25px 2px rgba(0,0,0,0.72);
+      box-shadow: 0px -5px 25px 2px rgba(0,0,0,0.72);
+
+      .title{
+        font-weight: 300;
+        display: inline;
+        font-size: 25px;
+      }
+
+      .amount{
+        float: right;
+        font-size: 23px;
+        font-weight: 300;
+
+        .small-text{
+          font-size: 10px;
+        }
+      }
+    }
+
+    &--provider {
+      background: #ff5b3d;
+      border-radius: 30px 30px 0px 0px;
+      position: relative;
+      padding: 20px 20px 50px 20px;
+      color: #fff;
+
+    .master-card{
+        position: absolute;
+        right: 15px;
+        bottom: 60px;
+        max-width: 50px;
+    }  
+
+    .avatar {
+      float: left;
+      width: 70px;
+      height: 70px;
+      border-radius: 100px;
+      border: 3px solid #fff;
+
+    }  
+
+    .number {
+      line-height:1;
+      margin:0;
+      text-align: left;
+      font-size: 18px;
+      font-family: monospace;
+      letter-spacing: 4px;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    .title{
+      font: $monzo-font;
+      text-align: right;
+      margin:0;
+      font-size: 45px;
+
+    &--sub{
+      text-align: right;
+      font-size: 15px;
+      margin: 0px;
+
+    }
+
+  }
+
+    }
+
+  }
+
+
+}
